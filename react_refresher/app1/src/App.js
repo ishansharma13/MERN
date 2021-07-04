@@ -15,8 +15,16 @@ function App() {
   ]);
 
   const addGoal = (text) => {
-    var x = {"id":"cg" + (parseInt(courseGoals[courseGoals.length -1]["id"].split("cg")[1]) +1).toString(),"text":text};
-    setNewGoals(courseGoals.concat(x));
+    
+    // setNewGoals(courseGoals.concat(x));
+    
+    // fullproof method when new state of a variable is dependent on the previous state
+    setNewGoals((prevGoals) =>{
+      
+      var x = {"id":"cg" + (parseInt(prevGoals[prevGoals.length -1]["id"].split("cg")[1]) +1).toString(),"text":text};
+      
+      return prevGoals.concat(x);
+    });
     // console.log(courseGoals.length);
   };
 
