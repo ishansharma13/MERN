@@ -1,0 +1,13 @@
+React is a javascript library that is used to build user interfaces, 
+it is used to create user interfaces that are highly reactive and is seen by the user
+runs on client side 
+components are created
+
+from parent to child --> props
+
+from child to parent ---> f1 (func in child comp) ; f2 (func in parent comp)
+
+add data in child comp pass it to f1, call f2 inside f1 with data as input parameter.
+
+
+once react renders data on html, it does not re render unless told so by changing the state
